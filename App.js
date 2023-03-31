@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <SafeAreaView>
-      <ScrollView>
+      <ScrollView style={{ height: "100%" }}>
         <View contentContainerStyle={styles.container}>
           <StatusBar style="auto" />
           <GraphWithLabel />
@@ -27,5 +27,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    height: "100%"
   },
 });
