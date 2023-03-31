@@ -1,13 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, Image, View, SafeAreaView } from 'react-native';
 import GraphWithLabel from './src/GraphWithLabels';
 
 export default function App() {
+  const logo = {
+    uri: 'https://reactnative.dev/img/tiny_logo.png',
+    width: 64,
+    height: 64,
+  };
+
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <GraphWithLabel />
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <View contentContainerStyle={styles.container}>
+          <StatusBar style="auto" />
+          <GraphWithLabel />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
